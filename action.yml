@@ -1,0 +1,15 @@
+name: 'Wrapper Action for Offensive Security Workflows'
+description: 'Runs an action with some additional OPSEC parameters'
+
+inputs:
+  uses:
+    description: A string representing an action to call (ie "nopcorn/rr-enum-secrets")
+    required: true
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Run action
+      continue-on-error: true
+      uses: ${{ inputs.uses }}
+      with: ${{ inputs }}
