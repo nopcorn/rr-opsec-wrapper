@@ -1,2 +1,2 @@
 # rr-opsec-wrapper
-Reusable Github action for use in offensive security workflow
+Reusable Github action for use in offensive security workflows
